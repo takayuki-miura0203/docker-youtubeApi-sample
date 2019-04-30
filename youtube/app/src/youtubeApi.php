@@ -4,7 +4,8 @@ require_once('../vendor/autoload.php');
 
 class YoutubeApi
 {
-    function run() {
+    public function run()
+    {
         $client = new Google_Client();
         $client->setApplicationName('Sample Application');
         // Note: Replace to your key
