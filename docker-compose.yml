@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  youtube:
+    build: youtube
+    image: youtube-image:1.0.0
+    container_name: youtube-container
+    init: true
+    tty: true
+    volumes:
+      - /path/to/youtube/app:/app
+    working_dir: /app
