@@ -7,13 +7,15 @@ Everywhere only if docker is enabled.
 ## exec
 1. Change the `/path/to` to real path in `docker-compose.yml` .
 
-2. Exec below.
+2. Change a google API key to your API key in `./youtube/app/src/youtubeApi.php` .
+
+3. Exec below.
 ```bash
 docker-compose build --no-cache
 docker-compose run --rm --entrypoint /bin/bash youtube
 ```
 
-3. In docker process, exec below.
+4. In docker process, exec below.
 ```bash
 composer install
 
