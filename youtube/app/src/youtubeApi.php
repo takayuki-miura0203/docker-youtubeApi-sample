@@ -2,7 +2,6 @@
 
 require_once('../vendor/autoload.php');
 
-
 class YoutubeApi
 {
     function run() {
@@ -19,7 +18,6 @@ class YoutubeApi
             [
                 'q' => 'Vtuber',
                 'type' => 'channel',
-                'type' => 'channel',
                 'order' => 'viewCount',
                 'maxResults' => 10,
                 'regionCode' => 'JP'
@@ -33,11 +31,11 @@ class YoutubeApi
                 ['id' => $item->snippet->channelId]
             );
 
-            echo('チャンネル名：' . $item->snippet->channelTitle);
+            echo('channel title   : ' . $item->snippet->channelTitle);
             echo("\n");
-            echo('登録者数：' . $channelsResponse->items[0]->statistics->subscriberCount);
+            echo('subscriber count: ' . $channelsResponse->items[0]->statistics->subscriberCount);
             echo("\n");
-            echo('総再生数：' . $channelsResponse->items[0]->statistics->viewCount);
+            echo('view count      : ' . $channelsResponse->items[0]->statistics->viewCount);
             echo("\n");
             echo("----\n\n");
         }
